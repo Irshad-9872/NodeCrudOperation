@@ -21,7 +21,9 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model('Product',productSchema);
 
-
+app.get('/', (req,res)=>{
+    res.status(200).json("Crud is working")
+})
 // create
 app.post('/product/create/new',async(req,res)=>{
 
